@@ -12,8 +12,8 @@ class MediaRootS3Storage(S3Boto3Storage):
 
         normalized = str(name).lstrip("/")
         location_prefix = f"{self.location.strip('/')}/"
-        if normalized.startswith(location_prefix):
-            return normalized[len(location_prefix):]
+        while normalized.startswith(location_prefix):
+            normalized = normalized[len(location_prefix):]
         return normalized
 
     def _save(self, name, content):
