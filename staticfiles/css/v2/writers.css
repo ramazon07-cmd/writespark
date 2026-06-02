@@ -1,0 +1,14 @@
+/* Writers page specific styles */
+.glass-card {
+    background: rgba(20, 20, 24, 0.5);
+    backdrop-filter: blur(20px);
+    border: 1px solid #2A2A32;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
+}
+
+.glass-card:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(245, 166, 35, 0.3);
+    transform: translateY(-4px) scale(1.01);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
