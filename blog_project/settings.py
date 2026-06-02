@@ -135,10 +135,7 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 STORAGES = {
     "default": {
-        "BACKEND": "storages.backends.s3boto3.S3Boto3Storage",
-        "OPTIONS": {
-            "location": os.environ.get("AWS_LOCATION", "media"),
-        },
+        "BACKEND": "blog.storage.MediaRootS3Storage",
     },
     "staticfiles": {
         "BACKEND": "django.contrib.staticfiles.storage.StaticFilesStorage",
